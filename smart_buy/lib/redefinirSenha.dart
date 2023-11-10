@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class redefinirSenha extends StatefulWidget {
-  const redefinirSenha({super.key});
+class RedefinirSenha extends StatefulWidget {
+  const RedefinirSenha({super.key});
 
   @override
-  State<redefinirSenha> createState() => _redefinirSenhaState();
+  State<RedefinirSenha> createState() => _RedefinirSenhaState();
 }
 
-class _redefinirSenhaState extends State<redefinirSenha> {
+class _RedefinirSenhaState extends State<RedefinirSenha> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class cadastrarUsuario extends StatefulWidget {
-  const cadastrarUsuario({super.key});
+class CadastrarUsuario extends StatefulWidget {
+  const CadastrarUsuario({super.key});
 
   @override
-  State<cadastrarUsuario> createState() => _cadastrarUsuarioState();
+  State<CadastrarUsuario> createState() => _CadastrarUsuarioState();
 }
 
-class _cadastrarUsuarioState extends State<cadastrarUsuario> {
+class _CadastrarUsuarioState extends State<CadastrarUsuario> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_buy/login.dart';
+import 'package:smart_buy/LoginPage.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:smart_buy/home.dart';
-import 'package:smart_buy/redefinirSenha.dart';
-import 'package:smart_buy/cadastrarUsuario.dart';
+import 'package:smart_buy/HomePage.dart';
+import 'package:smart_buy/RedefinirSenha.dart';
+import 'package:smart_buy/CadastrarUsuario.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -18,7 +18,14 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         children: [
 
-          SizedBox(height: 40),
+          SizedBox(height: 20),
+
+          Image.asset('assets/images/smartbuy.png',
+          width: 150,
+          height: 100,
+          ),
+
+          SizedBox(height: 15),
 
           Text(
             "BEM VINDO!",
@@ -45,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => cadastrarUsuario()),
+                    MaterialPageRoute(builder: (context) => CadastrarUsuario()),
                   );
                 },
                 child: Text(
@@ -60,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
             ],
           ),
 
-          SizedBox(height: 40),
+          SizedBox(height: 30),
 
           Text(
             "LOGIN",
@@ -100,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
 
-          SizedBox(height: 10),
+          SizedBox(height: 30),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 80),
@@ -144,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => redefinirSenha()),
+                    MaterialPageRoute(builder: (context) => RedefinirSenha()),
                   );
                 },
                 child: Text(
