@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_buy/home.dart';
+import 'package:smart_buy/redefinirSenha.dart';
+import 'package:smart_buy/cadastrarUsuario.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -22,17 +24,40 @@ class _LoginPageState extends State<LoginPage> {
             "BEM VINDO!",
             style: TextStyle(
               fontWeight: FontWeight.bold, 
-              fontSize: 40,
+              fontSize: 50,
               color: Color(0xFFE87C17)
             ),
           ),
 
-          Text(
-            "Não possui um cadastro? Cadastre-se",
-            style: TextStyle(
-              fontSize: 15,
-              color: Colors.grey
+            Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Não possui um cadastro? ",
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.grey,
+                ),
               ),
+
+              // GestureDetector para "Cadastre-se" como um link
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => cadastrarUsuario()),
+                  );
+                },
+                child: Text(
+                  "Cadastre-se",
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Color(0xFFE87C17),
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+            ],
           ),
 
           SizedBox(height: 40),
@@ -100,30 +125,69 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-          
-          Padding(
-            padding: const EdgeInsets.only(left: 40.0),
-            child: Text(
-            "Esqueceu sua senha? Clique aqui.",
-            style: TextStyle(
-              fontSize: 15,
-              color: Colors.grey
+
+          SizedBox(height: 10), 
+                   
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Esqueceu sua senha? ",
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.grey,
+                ),
               ),
-            ),
+
+              // GestureDetector para "Cadastre-se" como um link
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => redefinirSenha()),
+                  );
+                },
+                child: Text(
+                  "Clique aqui.",
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Color(0xFFE87C17),
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+            ],
           ),
 
           SizedBox(height: 30),
 
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => HomePage()),
-              );
-            },
-            child: Text('Entrar'),
-          ),
-      ]),
+          Container(
+            width: double.infinity,
+            height: 40.0,
+            padding: EdgeInsets.symmetric(horizontal: 80),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFFE87C17),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
+              ),
+              child: Text(
+                'Entrar',
+                style: TextStyle(
+                  fontSize: 17,
+                ),
+              ),
+            ),
+          )
+        ]
+      ),
     );
   }
 }
