@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:smart_buy/home.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginState extends State<Login> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +60,10 @@ class _LoginState extends State<Login> {
                 padding: const EdgeInsets.only(left: 3.0),
                 child: TextField(
                   decoration: InputDecoration (
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.only(left: 15.0, right: 8.0),
+                      child: Icon(Icons.person),
+                    ),
                     labelText: "Usuário",
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.grey),
@@ -83,7 +87,10 @@ class _LoginState extends State<Login> {
               ),
                 child: TextField(
                   decoration: InputDecoration (
-                    prefixIcon: Icon(Icons.lock),
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.only(left: 15.0, right: 8.0),
+                      child: Icon(Icons.lock),
+                    ),
                     labelText: "Senha",
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.grey),
@@ -94,7 +101,6 @@ class _LoginState extends State<Login> {
               ),
             ),
           
-
           Padding(
             padding: const EdgeInsets.only(left: 40.0),
             child: Text(
@@ -104,8 +110,19 @@ class _LoginState extends State<Login> {
               color: Colors.grey
               ),
             ),
-          )
+          ),
 
+          SizedBox(height: 30),
+
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
+            child: Text('Entrar'),
+          ),
       ]),
     );
   }
