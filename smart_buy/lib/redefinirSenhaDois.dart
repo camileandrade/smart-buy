@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:smart_buy/HomePage.dart';
-import 'package:smart_buy/LoginPage.dart';
-import 'package:smart_buy/redefinirSenhaDois.dart';
+import 'package:smart_buy/redefinirSenha.dart';
 
-class RedefinirSenha extends StatefulWidget {
-  const RedefinirSenha({super.key});
+class RedefinirSenhaDois extends StatefulWidget {
+  const RedefinirSenhaDois({super.key});
 
   @override
-  State<RedefinirSenha> createState() => _RedefinirSenhaState();
+  State<RedefinirSenhaDois> createState() => _RedefinirSenhaDois();
 }
 
-class _RedefinirSenhaState extends State<RedefinirSenha> {
+class _RedefinirSenhaDois extends State<RedefinirSenhaDois> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,18 +17,18 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
       body: Column(children: [
         SizedBox(height: 50),
         Text(
-          "Esqueceu sua \nsenha?",
+          "Enviamos um código \nde segurnaça",
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 50,
+              fontSize: 36,
               color: Color(0xFFE87C17)),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 54),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Informe no campo abaixo o seu e-mail, para \nprosseguir com o passo a passo de \nrecuperação de senha.",
+              "Verifique o e-mail informado e digite abaixo \no código de segurança.",
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey,
@@ -37,7 +36,7 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
             ),
           ],
         ),
-        SizedBox(height: 60),
+        SizedBox(height: 75),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 80),
           child: Container(
@@ -53,7 +52,7 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
                   prefixIcon: Padding(
                     padding: const EdgeInsets.only(left: 15.0, right: 8.0),
                   ),
-                  labelText: "E-mail",
+                  labelText: "Código de Segurança",
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
                     borderRadius: BorderRadius.circular(30.0),
@@ -74,7 +73,7 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => RedefinirSenha()), // Mudar aqui para a próxima página.
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -100,7 +99,7 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => RedefinirSenhaDois()),
+                      MaterialPageRoute(builder: (context) => HomePage()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
