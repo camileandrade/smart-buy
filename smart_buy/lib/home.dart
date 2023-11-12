@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:smart_buy/categoriaPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -42,9 +43,10 @@ class _HomePageState extends State<HomePage> {
                         Row(
                           children: [
                             Text(
-                              'Olá Camile',
+                              'Olá Camile,',
                               style: TextStyle(
                                 fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
                                 color: Color(0xFFE87C17)
                               ),
                             ),
@@ -89,6 +91,7 @@ class _HomePageState extends State<HomePage> {
                         "Favoritos >",
                         style: TextStyle(
                           fontSize: 15.0,
+                          fontWeight: FontWeight.bold,
                           color: Colors.black87,
                         ),
                       ),
@@ -174,6 +177,7 @@ class _HomePageState extends State<HomePage> {
                         "Navegue por estabelecimento >",
                         style: TextStyle(
                           fontSize: 15.0,
+                          fontWeight: FontWeight.bold,
                           color: Colors.black87,
                         ),
                       ),
@@ -259,11 +263,19 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 25.0, top: 20.0, right: 40.0, bottom: 20.0),
-                  child: Icon (
-                    Icons.favorite,
-                    color: Colors.grey[400],
-                    size: 40.0,
+                  padding: EdgeInsets.only(left: 15.0, top: 5.0, right: 40.0, bottom: 20.0),
+                  child: IconButton(
+                    icon: Icon (
+                      Icons.favorite,
+                      color: Colors.grey[400],
+                      size: 40.0,
+                    ),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => CategoriaPage()),
+                      );
+                    },
                   ),
                 ),
                 Padding(
