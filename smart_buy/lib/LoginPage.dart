@@ -56,11 +56,11 @@ class _LoginPageState extends State<LoginPage> {
                   );
                 },
                 child: Text(
-                  "Cadastre-se",
+                  "Cadastre-se.",
                   style: TextStyle(
                     fontSize: 15,
                     color: Color(0xFFE87C17),
-                    decoration: TextDecoration.underline,
+                    decoration: TextDecoration.none,
                   ),
                 ),
               ),
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
           SizedBox(height: 20),
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 80),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
           SizedBox(height: 30),
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 80),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -159,7 +159,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                     fontSize: 15,
                     color: Color(0xFFE87C17),
-                    decoration: TextDecoration.underline,
+                    decoration: TextDecoration.none,
                   ),
                 ),
               ),
@@ -171,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             width: double.infinity,
             height: 40.0,
-            padding: EdgeInsets.symmetric(horizontal: 80),
+            padding: EdgeInsets.symmetric(horizontal: 40),
             child: ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacement(
@@ -192,9 +192,63 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-          )
-        ]
-      ),
+          ),
+
+          SizedBox(height: 30),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(left: 40),
+                child: Container(
+                  height: 1.5, // Altura da linha
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+            SizedBox(width: 10), // Espaçamento entre a linha à esquerda e o texto "ou"
+            Text(
+              "OU",
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+            ),
+            SizedBox(width: 10), // Espaçamento entre o texto "ou" e a linha à direita
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(right: 40),
+                child: Container(
+                  height: 1.5, // Altura da linha
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+          ],
+        ),
+
+          SizedBox(height: 20),
+
+          Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ClipOval(
+              child: Image.asset('assets/images/google.png',
+                width: 40, // Defina o tamanho desejado
+                height: 40, // Defina o tamanho desejado
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(width: 20), // Adiciona um espaçamento entre as logos
+            ClipOval(
+              child: Image.asset('assets/images/facebook.png',
+                width: 40, // Defina o tamanho desejado
+                height: 40, // Defina o tamanho desejado
+                fit: BoxFit.cover,
+              ),
+            ),
+          ],
+        ),
+      ]),
     );
   }
 }
