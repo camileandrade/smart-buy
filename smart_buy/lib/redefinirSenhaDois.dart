@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:smart_buy/HomePage.dart';
+import 'package:smart_buy/LoginPage.dart';
 import 'package:smart_buy/redefinirSenha.dart';
+import 'package:smart_buy/redefinirSenha3.dart';
 
 class RedefinirSenhaDois extends StatefulWidget {
   const RedefinirSenhaDois({super.key});
@@ -16,14 +17,17 @@ class _RedefinirSenhaDois extends State<RedefinirSenhaDois> {
       backgroundColor: Colors.white,
       body: Column(children: [
         SizedBox(height: 50),
+
         Text(
-          "Enviamos um código \nde segurnaça",
+          "Enviamos um código \nde segurança",
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 36,
+              fontSize: 33,
               color: Color(0xFFE87C17)),
         ),
-        SizedBox(height: 54),
+
+        SizedBox(height: 40),
+
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -36,9 +40,11 @@ class _RedefinirSenhaDois extends State<RedefinirSenhaDois> {
             ),
           ],
         ),
-        SizedBox(height: 75),
+
+        SizedBox(height: 40),
+
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 80),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
@@ -62,7 +68,9 @@ class _RedefinirSenhaDois extends State<RedefinirSenhaDois> {
             ),
           ),
         ),
-        SizedBox(height: 60),
+
+        SizedBox(height: 50),
+
         Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -73,7 +81,7 @@ class _RedefinirSenhaDois extends State<RedefinirSenhaDois> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => RedefinirSenha()), // Mudar aqui para a próxima página.
+                      MaterialPageRoute(builder: (context) => LoginPage()), // Mudar aqui para a próxima página.
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -99,7 +107,7 @@ class _RedefinirSenhaDois extends State<RedefinirSenhaDois> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
+                      MaterialPageRoute(builder: (context) => RedefinirSenha3()),
                     );
                   },
                   style: ElevatedButton.styleFrom(

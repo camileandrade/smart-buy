@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smart_buy/HomePage.dart';
 import 'package:smart_buy/LoginPage.dart';
 import 'package:smart_buy/redefinirSenhaDois.dart';
 
@@ -17,6 +16,7 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
       backgroundColor: Colors.white,
       body: Column(children: [
         SizedBox(height: 50),
+
         Text(
           "Esqueceu sua \nsenha?",
           style: TextStyle(
@@ -24,7 +24,9 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
               fontSize: 50,
               color: Color(0xFFE87C17)),
         ),
-        SizedBox(height: 20),
+
+        SizedBox(height: 50),
+
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -37,9 +39,11 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
             ),
           ],
         ),
-        SizedBox(height: 60),
+
+        SizedBox(height: 40),
+
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 80),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
@@ -63,7 +67,9 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
             ),
           ),
         ),
-        SizedBox(height: 60),
+
+        SizedBox(height: 55),
+
         Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
