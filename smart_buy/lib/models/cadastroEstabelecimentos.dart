@@ -19,7 +19,7 @@ class _cadastroEstabelecimentoState extends State<cadastroEstabelecimento> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cadastro de Tarefas'),
+        title: Text('SmartBuy'),
       ),
       body: Stack(children: <Widget>[
         ListView(children: [
