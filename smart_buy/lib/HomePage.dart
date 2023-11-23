@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smart_buy/models/cadastroEstabelecimentos.dart';
-import 'package:smart_buy/models/estabelecimentos.dart';
+import 'package:smart_buy/cadastroEstabelecimentos.dart';
+import 'package:smart_buy/estabelecimentos.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

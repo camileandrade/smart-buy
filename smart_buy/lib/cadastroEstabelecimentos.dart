@@ -15,6 +15,7 @@ class _cadastroEstabelecimentoState extends State<cadastroEstabelecimento> {
   TextEditingController _enderecoController = TextEditingController();
   TextEditingController _horaAberturaController = TextEditingController();
   TextEditingController _horaFechamentoController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +38,12 @@ class _cadastroEstabelecimentoState extends State<cadastroEstabelecimento> {
         onPressed: () {
           addEstabelecimento(_nomeController.text, _enderecoController.text,
               _horaAberturaController.text, _horaFechamentoController.text);
+          _nomeController.clear();
+          _enderecoController.clear();
+          _horaAberturaController.clear();
+          _horaFechamentoController.clear();
+          final snackBar = SnackBar(content: Text('Cadastrado com sucesso!'));
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
         },
       ),
     );
