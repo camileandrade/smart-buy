@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:smart_buy/cadastroEstabelecimentos.dart';
 import 'package:smart_buy/categoriaPage.dart';
+import 'package:smart_buy/estabelecimentos.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,6 +18,45 @@ class _HomePageState extends State<HomePage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        drawer: Drawer(
+        child: ListView(children: [
+          UserAccountsDrawerHeader(
+            accountName: Text('Admin'),
+            accountEmail: Text('admin@gmail.com'),
+            currentAccountPicture: CircleAvatar(
+              radius: 30.0,
+              backgroundImage: AssetImage(
+                  'images/avatar_female_woman_person_people_white_tone_icon_159360.png'),
+            ),
+          ),
+          ListTile(
+            leading: Icon(Icons.star),
+            title: Text('Cadastrar Estabelecimentos'),
+            subtitle: Text('Cadastrar novos estabelecimentos'),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => cadastroEstabelecimento()));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.star),
+            title: Text('Estabelecimentos'),
+            subtitle: Text('Lista de estabelecimentos cadastrados'),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => estabelecimentos()));
+            },
+          )
+        ]),
+      ),
+      appBar: AppBar(
+        title: Text("Smart Buy"),
+        backgroundColor: Colors.orange,
+      ),
         body: Column(
           children: [
             // CONTAINER DE BOAS VINDAS AO USUÁRIO

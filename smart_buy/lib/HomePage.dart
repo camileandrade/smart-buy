@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:smart_buy/cadastroEstabelecimentos.dart';
 import 'package:smart_buy/estabelecimentos.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage2 extends StatefulWidget {
+  const HomePage2({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage2> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage2> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,21 +17,21 @@ class _HomePageState extends State<HomePage> {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: const MyHomePage(title: 'SmartBuy'),
+      home: const MyHome2Page(title: 'SmartBuy'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHome2Page extends StatefulWidget {
+  const MyHome2Page({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHome2Page> createState() => _MyHome2PageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHome2PageState extends State<MyHome2Page> {
   int _counter = 0;
 
   void _incrementCounter() {
